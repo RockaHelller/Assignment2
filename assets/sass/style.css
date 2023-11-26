@@ -52,8 +52,6 @@ body header .navbar {
   margin: auto;
 }
 body header .logo img {
-  width: 180px;
-  height: 80px;
   cursor: pointer;
 }
 body header .search-bar {
@@ -140,7 +138,6 @@ body main #filter .droplist-container .droplist-button {
   border-radius: 10px;
 }
 body main #filter .droplist-container .droplist-content {
-  display: none;
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -235,6 +232,35 @@ body main #product .pagination nav ul li a {
 body main #product .pagination .active {
   color: blue;
 }
+body footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+body footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+body footer .footer-container .footer-section {
+  max-width: 300px;
+}
+body footer .footer-container .footer-section h3 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+body footer .footer-container .footer-section p {
+  margin: 0;
+}
+body footer .footer-container .footer-section p a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+body footer .footer-container .footer-section p a:hover {
+  color: #FF8201;
+}
 
 @media (max-width: 1400px) {
   #info {
@@ -270,8 +296,6 @@ body main #product .pagination .active {
     margin-right: 10px;
   }
   .logo img {
-    width: 150px !important;
-    height: 60px !important;
     cursor: pointer;
   }
   input[type=text] {
@@ -298,6 +322,9 @@ body main #product .pagination .active {
     width: 400px !important;
     max-width: 1100px;
     border-radius: 20px;
+  }
+  .logo img {
+    width: 130px !important;
   }
 }
 @media (max-width: 768px) {
@@ -334,9 +361,8 @@ body main #product .pagination .active {
     margin-right: 10px;
   }
   .logo img {
-    width: 150px !important;
-    height: 60px !important;
     cursor: pointer;
+    width: 100px !important;
   }
   input[type=text] {
     padding: 10px;
