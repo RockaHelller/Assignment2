@@ -1,19 +1,27 @@
 function toggleDroplist() {
     var droplistContent = document.getElementById("droplistContent");
     droplistContent.style.display = (droplistContent.style.display === "block") ? "none" : "block";
-  }
+}
 
-  // Close the droplist only when clicking outside the droplist button or its children
-  window.onclick = function(event) {
-    var droplistButton = document.querySelector('.droplist-button');
-    var droplistContent = document.getElementById("droplistContent");
-
-    if (!event.target.closest('.droplist-container')) {
-      droplistContent.style.display = "none";
-    }
-  }
-
-  // Stop event propagation when clicking on checkboxes or labels
-  function stopPropagation(event) {
+// Stop event propagation when clicking on checkboxes or labels
+function stopPropagation(event) {
     event.stopPropagation();
-  }
+}
+
+function handleCheckboxClick(checkboxId) {
+    var checkbox = document.getElementById(checkboxId);
+    checkbox.checked = !checkbox.checked;
+}
+
+var droplistButtons = document.getElementsByClassName("droplist-button");
+
+for (var i = 0; i < droplistButtons.length; i++) {
+    droplistButtons[i].addEventListener("click", function () {
+        var upButton = this.querySelector(".fa-chevron-up");
+        if (upButton.classList.contains("rotate")) {
+            upButton.classList.remove("rotate");
+        } else {
+            upButton.classList.add("rotate");
+        }
+    });
+}

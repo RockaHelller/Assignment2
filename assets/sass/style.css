@@ -84,7 +84,7 @@ body header button:hover {
   background-color: #45a049;
 }
 body main #welcome .image {
-  background-image: url("../img/image-1.jpg") !important;
+  background-image: url("../img/samsung.webp") !important;
   width: 100%;
   height: 100vh;
   background: no-repeat;
@@ -113,10 +113,12 @@ body main #welcome .image .paragraph .bottom {
   font-family: "Catamaran", sans-serif;
   font-size: 16px;
   color: white;
+  text-transform: uppercase;
 }
 body main #filter .droplist-container {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 body main #filter .droplist-container .droplist-button {
   padding: 10px;
@@ -125,8 +127,17 @@ body main #filter .droplist-container .droplist-button {
   width: 150px;
   text-align: left;
 }
+body main #filter .droplist-container .droplist-button .rotate {
+  transform: rotate(180deg);
+}
+body main #filter .droplist-container .droplist-button i {
+  transition: transform 0.3s ease;
+}
 body main #filter .droplist-container .droplist-button {
   cursor: pointer;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
 }
 body main #filter .droplist-container .droplist-content {
   display: none;
@@ -134,9 +145,11 @@ body main #filter .droplist-container .droplist-content {
   background-color: #f9f9f9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  width: 100%;
 }
 body main #filter .droplist-container .droplist-content .checkbox-container {
   padding: 8px;
+  width: 100%;
 }
 body main #filter .droplist-container .droplist-content .checkbox-container .checkbox-label {
   margin-left: 5px;
@@ -188,10 +201,6 @@ body main #product .cars .box .bottom .model {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
-}
-body main #product .cars .box .bottom .detail {
-  font-size: 14px;
-  color: #666;
 }
 body main #product .cars .box .bottom .total .current-price {
   color: #e44d26;
