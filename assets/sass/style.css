@@ -44,12 +44,11 @@ main .image {
   height: 100vh;
   background: no-repeat;
   background-size: cover;
-  position: relative;
 }
 main .image .paragraph {
-  position: absolute;
-  top: 300px;
-  left: 200px;
+  position: relative;
+  top: 18em;
+  left: 5em;
 }
 main .image .paragraph .top h2 {
   font-family: "Catamaran", sans-serif;
@@ -62,4 +61,10 @@ main .image .paragraph .top h2 {
 }
 main .image .paragraph .top h2 span {
   color: #FF8201;
+}
+main .image .paragraph .bottom {
+  width: 350px;
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
