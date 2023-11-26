@@ -3,54 +3,100 @@
   padding: 0;
 }
 
-header #navigation .navbar {
-  padding: 20px;
+body {
+  overflow-x: hidden;
 }
-header #navigation .navbar .logo {
+body header #info {
+  background-color: #222222;
+  display: flex;
   color: white;
+  height: 6em;
 }
-header #navigation .navbar .logo img {
-  width: 105px;
+body header #info .socials a {
+  color: white;
+  text-decoration: none;
+}
+body header #info .socials a .fab {
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 12px;
+  transition: color 0.5s;
+}
+body header #info .socials .fab:hover {
+  color: #ff8201;
+}
+body header #info .contact {
+  font-family: "Catamaran", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  gap: 40px;
+}
+body header #info .contact .phone .fal {
+  margin-right: 10px;
+}
+body header #info .contact .mail .fal {
+  margin-right: 10px;
+}
+body header #navigation {
+  height: 0px;
+}
+body header .navbar {
+  padding: 10px 20px;
+  position: relative;
+  top: -3em;
+  background: #ededed;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+}
+body header .logo img {
+  width: 180px;
+  height: 80px;
   cursor: pointer;
 }
-header #navigation .navbar .search-bar {
+body header .search-bar {
   display: flex;
   align-items: center;
 }
-header #navigation .navbar .search-bar input[type=text] {
+body header input[type=text] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-right: 5px;
   outline: none;
   width: 1100px;
+  max-width: 1100px;
+  border-radius: 20px;
 }
-header #navigation .navbar .search-bar button {
+body header button {
   width: 100px;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #4CAF50;
+  border-radius: 20px;
+  background-color: #FF8201;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-header #navigation .navbar .search-bar button:hover {
+body header button:hover {
   background-color: #45a049;
 }
-
-main .image {
+body main #welcome .image {
   background-image: url("../img/image-1.jpg") !important;
   width: 100%;
   height: 100vh;
   background: no-repeat;
   background-size: cover;
+  background-position: center top;
 }
-main .image .paragraph {
+body main #welcome .image .paragraph {
   position: relative;
   top: 18em;
   left: 5em;
 }
-main .image .paragraph .top h2 {
+body main #welcome .image .paragraph .top h2 {
   font-family: "Catamaran", sans-serif;
   font-size: 44px;
   font-weight: 900;
@@ -59,12 +105,146 @@ main .image .paragraph .top h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-main .image .paragraph .top h2 span {
+body main #welcome .image .paragraph .top h2 span {
   color: #FF8201;
 }
-main .image .paragraph .bottom {
+body main #welcome .image .paragraph .bottom {
   width: 350px;
   font-family: "Catamaran", sans-serif;
   font-size: 16px;
   color: white;
+}
+body main #product .cars {
+  background-color: #F0F0F0;
+  padding: 10px;
+}
+body main #product .cars .box {
+  border-radius: 10px;
+  box-shadow: 0 17px 34px 0 rgba(44, 39, 56, 0.04), 0 8px 17px 0 rgba(44, 39, 56, 0.02);
+  transition: box-shadow 0.3s ease;
+}
+body main #product .cars .box .top img {
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+body main #product .cars .box .bottom {
+  padding: 10px;
+}
+body main #product .cars .box:hover {
+  box-shadow: 0 24px 48px 0 rgba(44, 39, 56, 0.1), 0 12px 24px 0 rgba(44, 39, 56, 0.06);
+}
+
+@media (max-width: 1400px) {
+  #info {
+    background-color: #222222;
+    display: flex;
+    color: white;
+    height: 6em;
+  }
+  #info .socials a {
+    color: white;
+    text-decoration: none;
+  }
+  #info .socials a .fab {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 10px !important;
+    transition: color 0.5s;
+  }
+  #info .socials .fab:hover {
+    color: #ff8201;
+  }
+  #info .contact {
+    font-family: "Catamaran", sans-serif;
+    font-size: 10px !important;
+    font-weight: 300;
+    display: flex;
+    gap: 40px;
+  }
+  #info .contact .phone .fal {
+    margin-right: 10px;
+  }
+  #info .contact .mail .fal {
+    margin-right: 10px;
+  }
+  .logo img {
+    width: 150px !important;
+    height: 60px !important;
+    cursor: pointer;
+  }
+  input[type=text] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 800px !important;
+    max-width: 1100px;
+    border-radius: 20px;
+  }
+  input[type=text] {
+    max-width: 90%;
+  }
+}
+@media (max-width: 992px) {
+  input[type=text] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 400px !important;
+    max-width: 1100px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #info {
+    background-color: #222222;
+    display: flex;
+    color: white;
+    height: 6em;
+  }
+  #info .socials a {
+    color: white;
+    text-decoration: none;
+  }
+  #info .socials a .fab {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 8px !important;
+    transition: color 0.5s;
+  }
+  #info .socials .fab:hover {
+    color: #ff8201;
+  }
+  #info .contact {
+    font-family: "Catamaran", sans-serif;
+    font-size: 8px !important;
+    font-weight: 300;
+    display: flex;
+    gap: 40px;
+  }
+  #info .contact .phone .fal {
+    margin-right: 10px;
+  }
+  #info .contact .mail .fal {
+    margin-right: 10px;
+  }
+  .logo img {
+    width: 150px !important;
+    height: 60px !important;
+    cursor: pointer;
+  }
+  input[type=text] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 200px !important;
+    max-width: 1100px;
+    border-radius: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

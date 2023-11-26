@@ -3,88 +3,346 @@
   padding: 0;
 }
 
-header {
-  #navigation {}
+body {
+  overflow-x: hidden;
 
-  #navigation .navbar {
-    padding: 20px;
+  header {
 
-    .logo {
+    #info {
+      background-color: #222222;
+      display: flex;
       color: white;
+      height: 6em;
 
-      img {
-        width: 105px;
-        cursor: pointer;
+      .socials {
+        a {
+          color: white;
+          text-decoration: none;
+
+          .fab {
+            cursor: pointer;
+            margin-right: 20px;
+            font-size: 12px;
+            transition: color 0.5s;
+          }
+        }
+
+        .fab:hover {
+          color: #ff8201;
+        }
       }
+
+      .contact {
+        font-family: 'Catamaran', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        display: flex;
+        gap: 40px;
+
+        .phone {
+          .fal {
+            margin-right: 10px;
+          }
+        }
+
+        .mail {
+          .fal {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    #navigation {
+      height: 0px;
+    }
+
+    .navbar {
+      padding: 10px 20px;
+      position: relative;
+      top: -3em;
+      background: #ededed;
+      border-radius: 50px;
+      width: 100%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .logo img {
+      width: 180px;
+      height: 80px;
+      cursor: pointer;
     }
 
     .search-bar {
       display: flex;
       align-items: center;
+    }
 
-      input[type="text"] {
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 5px;
+      outline: none;
+      width: 1100px;
+      max-width: 1100px;
+      border-radius: 20px;
+    }
+
+    button {
+      width: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: #FF8201;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+  }
+
+  main {
+    #welcome {
+      .image {
+        background-image: url("../img/image-1.jpg") !important;
+        width: 100%;
+        height: 100vh;
+        background: no-repeat;
+        background-size: cover;
+        background-position: center top;
+
+        .paragraph {
+          position: relative;
+          top: 18em;
+          left: 5em;
+
+          .top {
+
+            h2 {
+              font-family: 'Catamaran', sans-serif;
+              font-size: 44px;
+              font-weight: 900;
+              color: white;
+              width: 500px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+
+              span {
+                color: #FF8201;
+              }
+            }
+          }
+
+          .bottom {
+            width: 350px;
+            font-family: 'Catamaran', sans-serif;
+            font-size: 16px;
+            color: white;
+
+          }
+        }
+      }
+    }
+
+    #product {
+      .cars {
+        background-color: #F0F0F0;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-right: 5px;
-        outline: none;
-        width: 1100px;
+    
+        .box {
+          border-radius: 10px;
+          box-shadow: 0 17px 34px 0 rgba(44,39,56,0.04), 0 8px 17px 0 rgba(44,39,56,0.02);
+          transition: box-shadow 0.3s ease;
+    
+          .top {
+            img {
+              width: 100%;
+              border-top-left-radius: 6px;
+              border-top-right-radius: 6px;
+            }
+          }
+    
+          .bottom {
+            padding: 10px;
+          }
+    
+          &:hover {
+            box-shadow: 0 24px 48px 0 rgba(44,39,56,0.1), 0 12px 24px 0 rgba(44,39,56,0.06);
+          }
+        }
+      }
+    }
+    
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1400px) {
+  #info {
+    background-color: #222222;
+    display: flex;
+    color: white;
+    height: 6em;
+
+    .socials {
+      a {
+        color: white;
+        text-decoration: none;
+
+        .fab {
+          cursor: pointer;
+          margin-right: 20px;
+          font-size: 10px !important;
+          transition: color 0.5s;
+        }
       }
 
-      button {
-        width: 100px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #4CAF50;
-        color: white;
-        cursor: pointer;
+      .fab:hover {
+        color: #ff8201;
+      }
+    }
 
-        &:hover {
-          background-color: #45a049;
+    .contact {
+      font-family: 'Catamaran', sans-serif;
+      font-size: 10px !important;
+      font-weight: 300;
+      display: flex;
+      gap: 40px;
+
+      .phone {
+        .fal {
+          margin-right: 10px;
+        }
+      }
+
+      .mail {
+        .fal {
+          margin-right: 10px;
         }
       }
     }
   }
+
+  .logo img {
+    width: 150px !important;
+    height: 60px !important;
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 800px !important;
+    max-width: 1100px;
+    border-radius: 20px;
+  }
+
+  input[type="text"] {
+    max-width: 90%;
+  }
+
+
+
+
 }
 
-main {
-  .image {
-    background-image: url("../img/image-1.jpg") !important;
-    width: 100%;
-    height: 100vh;
-    background: no-repeat;
-    background-size: cover;
+@media (max-width: 992px) {
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 400px !important;
+    max-width: 1100px;
+    border-radius: 20px;
+  }
+}
 
-    .paragraph {
-      position: relative;
-      top: 18em;
-      left: 5em;
+@media (max-width: 768px) {
+  #info {
+    background-color: #222222;
+    display: flex;
+    color: white;
+    height: 6em;
 
-      .top {
+    .socials {
+      a {
+        color: white;
+        text-decoration: none;
 
-        h2 {
-          font-family: 'Catamaran', sans-serif;
-          font-size: 44px;
-          font-weight: 900;
-          color: white;
-          width: 500px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-
-          span {
-            color: #FF8201;
-          }
+        .fab {
+          cursor: pointer;
+          margin-right: 20px;
+          font-size: 8px !important;
+          transition: color 0.5s;
         }
       }
 
-      .bottom {
-        width: 350px;
-        font-family: 'Catamaran', sans-serif;
-        font-size: 16px;
-        color: white;
-
+      .fab:hover {
+        color: #ff8201;
       }
     }
+
+    .contact {
+      font-family: 'Catamaran', sans-serif;
+      font-size: 8px !important;
+      font-weight: 300;
+      display: flex;
+      gap: 40px;
+
+      .phone {
+        .fal {
+          margin-right: 10px;
+        }
+      }
+
+      .mail {
+        .fal {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .logo img {
+    width: 150px !important;
+    height: 60px !important;
+    cursor: pointer;
+  }
+
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 200px !important;
+    max-width: 1100px;
+    border-radius: 20px;
   }
 }
