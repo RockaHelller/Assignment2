@@ -108,51 +108,204 @@
             </div>
         </section>
 
-        <section id="product">
-            <div class="container">
-                <div class="cars">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="box mt-3">
-                                <div class="top">
-                                    <img src="https://www.motortrend.com/uploads/sites/5/2012/07/2013-Porsche-Cayenne-GTS-front-three-quarters-in-motion.JPG.jpg" alt="">
+        <div class="row">
+            <div class="col-2">
+                <section id="filter">
+                    <div class="droplist-container">
+                        <div class="droplist-button" onclick="toggleDroplist()">Select Options</div>
+                        <div class="droplist-content" id="droplistContent">
+                          <div class="checkbox-container">
+                            <input type="checkbox" id="option1" name="option1" onclick="stopPropagation(event)">
+                            <label class="checkbox-label" for="option1" onclick="stopPropagation(event)">Option 1</label>
+                          </div>
+                          <div class="checkbox-container">
+                            <input type="checkbox" id="option2" name="option2" onclick="stopPropagation(event)">
+                            <label class="checkbox-label" for="option2" onclick="stopPropagation(event)">Option 2</label>
+                          </div>
+                          <div class="checkbox-container">
+                            <input type="checkbox" id="option3" name="option3" onclick="stopPropagation(event)">
+                            <label class="checkbox-label" for="option3" onclick="stopPropagation(event)">Option 3</label>
+                          </div>
+                          <!-- Add more checkboxes as needed -->
+                        </div>
+                      </div>
+                </section>
+            </div>
+            <div class="col-10">
+                <section id="product">
+                    <div class="container">
+                        <div class="cars">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="box mt-3">
+                                        <div class="top">
+                                            <img src="https://www.motortrend.com/uploads/sites/5/2012/07/2013-Porsche-Cayenne-GTS-front-three-quarters-in-motion.JPG.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="model">
+                                                Porsche Cayenne GTS
+                                            </div>
+                                            <div class="total d-flex">
+                                                <div class="price me-2">
+                                                    65 900AZN
+                                                </div>
+                                                <div class="discount-price me-2">
+                                                    59 310AZN
+                                                </div>
+                                                <div class="discount">
+                                                    -10%
+                                                </div>
+                                            </div>
+                                            <div class="detail d-flex">
+                                                <div class="specs">
+                                                    2013, 4.8L, 160 000Km
+                                                </div>
+                                            </div>
+                                            <div class="category">
+                                                SUV
+                                            </div>
+                                            <div class="stock">
+                                                In Stock: 5
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="bottom">
-                                    <div class="model">
-                                        Porsche Cayenne GTS
-                                    </div>
-                                    <div class="total d-flex">
-                                        <div class="price me-2">
-                                            65 900AZN
+                                <div class="col-3">
+                                    <div class="box mt-3">
+                                        <div class="top">
+                                            <img src="https://www.motortrend.com/uploads/sites/5/2012/07/2013-Porsche-Cayenne-GTS-front-three-quarters-in-motion.JPG.jpg"
+                                                alt="">
                                         </div>
-                                        <div class="discount-price me-2">
-                                            59 310AZN
-                                        </div>
-                                        <div class="discount">
-                                            -10%
+                                        <div class="bottom">
+                                            <div class="model">
+                                                Porsche Cayenne GTS
+                                            </div>
+                                            <div class="total d-flex">
+                                                <div class="price me-2">
+                                                    65 900AZN
+                                                </div>
+                                                <div class="discount-price me-2">
+                                                    59 310AZN
+                                                </div>
+                                                <div class="discount">
+                                                    -10%
+                                                </div>
+                                            </div>
+                                            <div class="detail d-flex">
+                                                <div class="specs">
+                                                    2013, 4.8L, 160 000Km
+                                                </div>
+                                            </div>
+                                            <div class="category">
+                                                SUV
+                                            </div>
+                                            <div class="stock">
+                                                In Stock: 5
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="detail d-flex">
-                                        <div class="specs">
-                                            2013, 4.8L, 160 000Km
+                                </div>
+                                <div class="col-3">
+                                    <div class="box mt-3">
+                                        <div class="top">
+                                            <img src="https://www.motortrend.com/uploads/sites/5/2012/07/2013-Porsche-Cayenne-GTS-front-three-quarters-in-motion.JPG.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="model">
+                                                Porsche Cayenne GTS
+                                            </div>
+                                            <div class="total d-flex">
+                                                <div class="price me-2">
+                                                    65 900AZN
+                                                </div>
+                                                <div class="discount-price me-2">
+                                                    59 310AZN
+                                                </div>
+                                                <div class="discount">
+                                                    -10%
+                                                </div>
+                                            </div>
+                                            <div class="detail d-flex">
+                                                <div class="specs">
+                                                    2013, 4.8L, 160 000Km
+                                                </div>
+                                            </div>
+                                            <div class="category">
+                                                SUV
+                                            </div>
+                                            <div class="stock">
+                                                In Stock: 5
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="category">
-                                        SUV
-                                    </div>
-                                    <div class="stock">
-                                        In Stock: 5
+                                </div>
+                                <div class="col-3">
+                                    <div class="box mt-3">
+                                        <div class="top">
+                                            <img src="https://www.motortrend.com/uploads/sites/5/2012/07/2013-Porsche-Cayenne-GTS-front-three-quarters-in-motion.JPG.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="model">
+                                                Porsche Cayenne GTS2
+                                            </div>
+                                            <div class="total d-flex">
+                                                <div class="price me-2">
+                                                    65 900AZN
+                                                </div>
+                                                <div class="discount-price me-2">
+                                                    59 310AZN
+                                                </div>
+                                                <div class="discount">
+                                                    -10%
+                                                </div>
+                                            </div>
+                                            <div class="detail d-flex">
+                                                <div class="specs">
+                                                    2013, 4.8L, 160 000Km
+                                                </div>
+                                            </div>
+                                            <div class="category">
+                                                SUV
+                                            </div>
+                                            <div class="stock">
+                                                In Stock: 5
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="pagination d-flex justify-content-center mt-3">
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link active" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-
+                </section>
             </div>
+        </div>
 
-        </section>
+
+
+
+
+
 
         <br>
         <br>
@@ -161,6 +314,8 @@
 
     </main>
     <footer></footer>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

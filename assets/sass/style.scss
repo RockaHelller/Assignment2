@@ -150,92 +150,164 @@ body {
       }
     }
 
+    #filter {
+      // Style for the droplist container
+.droplist-container {
+  position: relative;
+  display: inline-block;
+
+  // Style for the droplist button
+  .droplist-button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 150px;
+    text-align: left;
+  }
+  .droplist-button {
+    cursor: pointer;
+  }
+  .droplist-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    .checkbox-container {
+      padding: 8px;
+
+      .checkbox-label {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+// Style for the checkboxes
+.checkbox {
+  margin-bottom: 10px;
+
+  &-container {
+    padding: 8px;
+    background-color: #f9f9f9;
+
+    &:hover {
+      background-color: lighten(#f9f9f9, 5%);
+    }
+
+    // Style for the label text next to the checkboxes
+    &-label {
+      margin-left: 5px;
+    }
+  }
+}
+
+    }
+
     #product {
       .cars {
         background-color: #F0F0F0;
         padding: 10px;
-    
+
         .row {
-            display: flex;
+          display: flex;
         }
-    
+
         .box {
-            border-radius: 10px;
-            box-shadow: 0 17px 34px 0 rgba(44, 39, 56, 0.04), 0 8px 17px 0 rgba(44, 39, 56, 0.02);
-            transition: box-shadow 0.3s ease;
-    
-            .top {
-                overflow: hidden;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-    
-                img {
-                    width: 100%;
-                    display: block;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-                    transition: transform 0.3s ease;
-    
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
+          border-radius: 10px;
+          box-shadow: 0 17px 34px 0 rgba(44, 39, 56, 0.04), 0 8px 17px 0 rgba(44, 39, 56, 0.02);
+          transition: box-shadow 0.3s ease;
+
+          .top {
+            overflow: hidden;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            img {
+              width: 100%;
+              display: block;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              transition: transform 0.3s ease;
+
+              &:hover {
+                transform: scale(1.1);
+              }
             }
-    
-            .bottom {
-                padding: 10px;
-    
-                .model {
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-    
-                .detail {
-                    font-size: 14px;
-                    color: #666;
-                }
-    
-                .total {
-                    .current-price {
-                        color: #e44d26;
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-    
-                    .price {
-                        font-size: 16px;
-                        color: #c1624a;
-                        text-decoration: line-through;
-                    }
-    
-                    .discount-price {
-                        color: #e44d26;
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-    
-                    .discount {}
-    
-                }
-    
-                .category {
-                    font-size: 12px;
-                }
-    
-                .stock {
-                    font-size: 12px;
-                    color: #333;
-                    margin-top: 5px;
-                }
+          }
+
+          .bottom {
+            padding: 10px;
+
+            .model {
+              font-size: 18px;
+              font-weight: bold;
+              margin-bottom: 5px;
             }
-    
-            &:hover {
-                box-shadow: 0 24px 48px 0 rgba(44, 39, 56, 0.1), 0 12px 24px 0 rgba(44, 39, 56, 0.06);
+
+            .detail {
+              font-size: 14px;
+              color: #666;
             }
+
+            .total {
+              .current-price {
+                color: #e44d26;
+                font-size: 16px;
+                font-weight: bold;
+              }
+
+              .price {
+                font-size: 16px;
+                color: #c1624a;
+                text-decoration: line-through;
+              }
+
+              .discount-price {
+                color: #e44d26;
+                font-size: 16px;
+                font-weight: bold;
+              }
+
+              .discount {}
+
+            }
+
+            .category {
+              font-size: 12px;
+            }
+
+            .stock {
+              font-size: 12px;
+              color: #333;
+              margin-top: 5px;
+            }
+          }
+
+          &:hover {
+            box-shadow: 0 24px 48px 0 rgba(44, 39, 56, 0.1), 0 12px 24px 0 rgba(44, 39, 56, 0.06);
+          }
         }
-    }
-    
+      }
+
+      .pagination {
+        nav {
+          ul {
+            li {
+              a {
+                text-decoration: none;
+                color: grey;
+              }
+            }
+          }
+        }
+
+        .active {
+          color: blue;
+        }
+
+      }
 
     }
 
