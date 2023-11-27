@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/product-detail.css">
+    <title>Document</title>
+</head>
+
+<body onload="initializeDefaultTab()">
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Image1')" id="defaultOpen">Image 1</button>
+        <button class="tablinks" onclick="openTab(event, 'Image2')">Image 2</button>
+        <button class="tablinks" onclick="openTab(event, 'Image3')">Image 3</button>
+    </div>
+
+    <div id="Image1" class="tabcontent">
+        <img src="path_to_image1.jpg" alt="Image 1">
+    </div>
+
+    <div id="Image2" class="tabcontent">
+        <img src="path_to_image2.jpg" alt="Image 2">
+    </div>
+
+    <div id="Image3" class="tabcontent">
+        <img src="path_to_image3.jpg" alt="Image 3">
+    </div>
+
+
+
+    <script src="./assets/js/product-script.js"></script>
+</body>
+
+</html>
