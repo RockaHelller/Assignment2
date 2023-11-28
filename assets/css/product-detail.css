@@ -350,9 +350,20 @@ body footer .footer-container .footer-section p a:hover {
 
 body .main-holder {
   display: flex;
+  margin-bottom: 20px;
 }
 body .main-holder .left {
-  width: 50%;
+  width: 70%;
+}
+body .main-holder .left .navButton {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  font-size: 20px;
 }
 body .main-holder .left .holder {
   display: flex;
@@ -368,9 +379,20 @@ body .main-holder .left .holder .tab {
   flex-direction: column;
   align-items: center;
   /* Style the buttons inside the tab */
+}
+body .main-holder .left .holder .tab i {
+  text-align: center;
+}
+body .main-holder .left .holder .tab .tablinksContainer {
+  overflow: hidden; /* Enable vertical scroll */
+  max-height: calc(100% - 40px); /* Adjust height to account for nav buttons */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55vh;
   /* Highlight the active tab */
 }
-body .main-holder .left .holder .tab button {
+body .main-holder .left .holder .tab .tablinksContainer button {
   border: none;
   outline: none;
   cursor: pointer;
@@ -378,19 +400,23 @@ body .main-holder .left .holder .tab button {
   padding: 10px;
   margin: 5px;
   width: 100%;
+  display: flex;
+  justify-content: center;
   /* Style the images inside the buttons */
 }
-body .main-holder .left .holder .tab button img {
+body .main-holder .left .holder .tab .tablinksContainer button img {
   width: 80%;
   height: auto;
   display: block;
+  width: 155px;
+  height: 106px;
 }
-body .main-holder .left .holder .tab button img:hover {
+body .main-holder .left .holder .tab .tablinksContainer button img:hover {
   opacity: 0.7;
 }
-body .main-holder .left .holder .tab button.active img {
+body .main-holder .left .holder .tab .tablinksContainer button.active img {
   opacity: 1;
-  border: 2px solid blue;
+  border: 2px solid #45a049;
 }
 body .main-holder .left .holder .tabcontent {
   flex: 0 0 75%;
@@ -402,31 +428,52 @@ body .main-holder .left .holder .tabcontent {
 }
 body .main-holder .left .holder .tabcontent img {
   max-width: 100%;
+  width: 602px !important;
+  height: 407px !important;
   height: auto;
 }
 body .main-holder .right {
-  width: 50%;
-  padding: 10px;
+  width: 30%;
+  padding: 10px 30px;
 }
 body .main-holder .right .model {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: bold;
   margin-bottom: 5px;
+  word-wrap: break-word;
 }
-body .main-holder .right .total .current-price {
-  color: #e44d26;
-  font-size: 16px;
-  font-weight: bold;
+body .main-holder .right .total {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
-body .main-holder .right .total .price {
-  font-size: 16px;
-  color: #c1624a;
-  text-decoration: line-through;
+body .main-holder .right .total span .discount {
+  font-style: normal;
+  border: 1px solid #17a539;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.02em;
+  color: #17a539;
+  padding: 4px 4.33px;
+  font-family: sans-serif;
+}
+body .main-holder .right .total span .price {
+  color: #777;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: sans-serif;
+  margin-left: 5px;
 }
 body .main-holder .right .total .discount-price {
-  color: #e44d26;
-  font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  color: #ff003c;
+  font-family: sans-serif;
 }
 body .main-holder .right .category {
   font-size: 12px;
@@ -435,4 +482,23 @@ body .main-holder .right .stock {
   font-size: 12px;
   color: gray;
   margin-top: 5px;
+}
+body .main-holder .right .specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: 20px;
+}
+body .main-holder .right .specs-table th,
+body .main-holder .right .specs-table td {
+  padding: 8px;
+}
+body .main-holder .right .specs-table tr {
+  border-bottom: 1px solid #ddd;
+}
+body .main-holder .right .specs-table tr:first-child {
+  border-top: none;
+}
+body .main-holder .right .specs-table th {
+  background-color: #f4f4f4;
 }/*# sourceMappingURL=product-detail.css.map */

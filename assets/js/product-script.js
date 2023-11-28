@@ -15,3 +15,29 @@ function openTab(evt, imageName) {
 function initializeDefaultTab() {
     document.getElementById("defaultOpen").click();
 }
+
+
+
+
+function navigateTabs(direction) {
+    var tabs = document.getElementsByClassName("tablinks");
+    var activeTab;
+    for (var i = 0; i < tabs.length; i++) {
+        if (tabs[i].className.includes("active")) {
+            activeTab = i;
+            break;
+        }
+    }
+    if (direction === 'next' && activeTab < tabs.length - 1) {
+        tabs[activeTab + 1].click();
+        tabs[activeTab + 1].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+    } else if (direction === 'prev' && activeTab > 0) {
+        tabs[activeTab - 1].click();
+        tabs[activeTab - 1].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+    }
+}
+
+
+document.getElementById('nextButton').onclick = function() { navigateTabs('next'); };
+document.getElementById('prevButton').onclick = function() { navigateTabs('prev'); };
+

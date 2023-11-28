@@ -377,9 +377,21 @@ body {
 
     .main-holder {
         display: flex;
+        margin-bottom: 20px;
 
         .left {
-            width: 50%;
+            width: 70%;
+
+            .navButton {
+                border: none;
+                outline: none;
+                cursor: pointer;
+                transition: 0.3s;
+                padding: 10px;
+                margin: 5px;
+                width: 100%;
+                font-size: 20px;
+            }
 
             .holder {
                 display: flex;
@@ -394,33 +406,53 @@ body {
                     flex-direction: column;
                     align-items: center;
 
+                    i{
+                        text-align: center;
+                    }
+
                     /* Style the buttons inside the tab */
-                    button {
-                        border: none;
-                        outline: none;
-                        cursor: pointer;
-                        transition: 0.3s;
-                        padding: 10px;
-                        margin: 5px;
-                        width: 100%;
+                    .tablinksContainer {
+                        overflow: hidden; /* Enable vertical scroll */
+                        max-height: calc(100% - 40px); /* Adjust height to account for nav buttons */
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 55vh;
 
-                        /* Style the images inside the buttons */
-                        img {
-                            width: 80%; // Adjust image width as needed
-                            height: auto;
-                            display: block;
 
-                            &:hover {
-                                opacity: 0.7;
+                        button {
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            padding: 10px;
+                            margin: 5px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+    
+                            /* Style the images inside the buttons */
+                            img {
+                                width: 80%; // Adjust image width as needed
+                                height: auto;
+                                display: block;
+                                width: 155px;
+                                height: 106px;
+    
+                                &:hover {
+                                    opacity: 0.7;
+                                }
                             }
+                        }
+    
+                        /* Highlight the active tab */
+                        button.active img {
+                            opacity: 1;
+                            border: 2px solid #45a049;
                         }
                     }
 
-                    /* Highlight the active tab */
-                    button.active img {
-                        opacity: 1;
-                        border: 2px solid blue;
-                    }
+                    
                 }
 
                 /* Style the tab content */
@@ -434,6 +466,8 @@ body {
 
                     img {
                         max-width: 100%;
+                        width: 602px !important;
+                        height: 407px !important;
                         height: auto;
                     }
                 }
@@ -441,32 +475,58 @@ body {
         }
 
         .right {
-            width: 50%;
-            padding: 10px;
+            width: 30%;
+            padding: 10px 30px;
 
             .model {
-                font-size: 18px;
+                font-size: 26px;
                 font-weight: bold;
-                margin-bottom: 5px
+                margin-bottom: 5px;
+                word-wrap: break-word;
             }
 
-            .total .current-price {
-                color: #e44d26;
-                font-size: 16px;
-                font-weight: bold
+            .total {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+
+                span {
+                    .discount {
+                        font-style: normal;
+                        border: 1px solid #17a539;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 12px;
+                        letter-spacing: -0.02em;
+                        color: #17a539;
+                        padding: 4px 4.33px;
+                        font-family: sans-serif;
+                    }
+
+                    .price {
+                        color: #777;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 24px;
+                        font-family: sans-serif;
+                        margin-left: 5px;
+
+                    }
+                }
+
+                .discount-price {
+                    font-weight: 700;
+                    font-size: 28px;
+                    line-height: 30px;
+                    color: #ff003c;
+                    font-family: sans-serif;
+
+                }
             }
 
-            .total .price {
-                font-size: 16px;
-                color: #c1624a;
-                text-decoration: line-through
-            }
 
-            .total .discount-price {
-                color: #e44d26;
-                font-size: 16px;
-                font-weight: bold
-            }
 
             .category {
                 font-size: 12px
@@ -477,6 +537,31 @@ body {
                 color: gray;
                 margin-top: 5px
             }
+
+            .specs-table {
+                width: 100%;
+                border-collapse: collapse; // Removes default double borders
+                text-align: left; // Aligns text to the left
+                margin-top: 20px; // Adds some space above the table
+
+                th,
+                td {
+                    padding: 8px; // Adds padding inside each cell
+                }
+
+                tr {
+                    border-bottom: 1px solid #ddd; // Only bottom border for each row
+
+                    &:first-child {
+                        border-top: none; // Removes the top border of the first row
+                    }
+                }
+
+                th {
+                    background-color: #f4f4f4; // Light grey background for headers
+                }
+            }
+
         }
 
 
