@@ -5,76 +5,76 @@
   --gray-3: #ededed;
   --gray-4: #ccc;
   --gray-5: #f9f9f9;
-  --background: #f0f0f0
+  --background: #f0f0f0;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: Catamaran
+  font-family: Catamaran;
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 ul {
-  list-style-type: none
+  list-style-type: none;
 }
 
 .container {
   width: 90%;
   max-width: 1250px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .align-center {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
 }
 
 .justify-between {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .justify-center {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
 }
 
 .mt-3 {
-  margin-top: 15px
+  margin-top: 15px;
 }
 
 .mt-4 {
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 .mb-3 {
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .mr-1 {
-  margin-right: 5px
+  margin-right: 5px;
 }
 
 .w-100 {
-  width: 100%
+  width: 100%;
 }
 
 .flex-wrap {
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 body {
@@ -87,24 +87,24 @@ body header #info {
   display: -ms-flexbox;
   display: flex;
   color: #fff;
-  height: 6em
+  height: 6em;
 }
 
 body header #info .socials a {
   color: #fff;
-  text-decoration: none
+  text-decoration: none;
 }
 
 body header #info .socials a .fab {
   cursor: pointer;
   margin-right: 20px;
   font-size: 12px;
-  -webkit-transition: color .5s;
-  transition: color .5s
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 body header #info .socials .fab:hover {
-  color: #45a049
+  color: #45a049;
 }
 
 body header #info .contact {
@@ -114,29 +114,29 @@ body header #info .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px
+  gap: 40px;
 }
 
 body header #info .contact a {
-  -webkit-transition: color .5s;
-  transition: color .5s;
-  color: #fff
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #fff;
 }
 
 body header #info .contact a:hover {
-  color: var(--main-default)
+  color: var(--main-default);
 }
 
 body header #info .contact .phone .fal {
-  margin-right: 10px
+  margin-right: 10px;
 }
 
 body header #info .contact .mail .fal {
-  margin-right: 10px
+  margin-right: 10px;
 }
 
 body header #navigation {
-  height: 0px
+  height: 0px;
 }
 
 body header .navbar {
@@ -147,21 +147,22 @@ body header .navbar {
   border-radius: 50px;
   max-width: 1250px;
   margin: auto;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 body header .logo {
-  height: 24px
+  height: 24px;
 }
 
 body header .logo img {
-  cursor: pointer
+  cursor: pointer;
 }
 
 body header .search-part {
   width: 70%;
-  max-width: 1000px
+  max-width: 1000px;
 }
 
 body header .search-bar {
@@ -170,10 +171,10 @@ body header .search-bar {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
 }
 
-body header input[type=text] {
+body header input[type="text"] {
   padding: 10px;
   border: 1px solid var(--gray-4);
   border-radius: 5px;
@@ -181,7 +182,7 @@ body header input[type=text] {
   outline: none;
   width: 1100px;
   max-width: 1100px;
-  border-radius: 20px
+  border-radius: 20px;
 }
 
 body header button {
@@ -192,12 +193,12 @@ body header button {
   background-color: #ff8201;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: background-color .3s ease;
-  transition: background-color .3s ease
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 body header button:hover {
-  background-color: var(--main-default)
+  background-color: var(--main-default);
 }
 
 body main #welcome .image {
@@ -206,13 +207,13 @@ body main #welcome .image {
   height: 100vh;
   background: no-repeat;
   background-size: cover;
-  background-position: center top
+  background-position: center top;
 }
 
 body main #welcome .image .paragraph {
   position: relative;
   top: 18em;
-  left: 5em
+  left: 5em;
 }
 
 body main #welcome .image .paragraph .top h2 {
@@ -222,11 +223,11 @@ body main #welcome .image .paragraph .top h2 {
   color: #fff;
   width: 500px;
   letter-spacing: 1px;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 body main #welcome .image .paragraph .top h2 span {
-  color: #ff8201
+  color: #ff8201;
 }
 
 body main #welcome .image .paragraph .bottom {
@@ -234,189 +235,209 @@ body main #welcome .image .paragraph .bottom {
   font-family: "Catamaran", sans-serif;
   font-size: 16px;
   color: #fff;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 body main #filter .droplist-container {
   position: relative;
   display: inline-block;
-  width: 100%
+  width: 100%;
 }
 
 body main #filter .droplist-container .droplist-content {
   position: absolute;
   background-color: var(--gray-5);
-  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 100%
+  width: 100%;
 }
 
 body main #filter .droplist-container .droplist-content .checkbox-container {
   padding: 8px;
-  width: 100%
+  width: 100%;
 }
 
-body main #filter .droplist-container .droplist-content .checkbox-container .checkbox-label {
-  margin-left: 5px
+body
+  main
+  #filter
+  .droplist-container
+  .droplist-content
+  .checkbox-container
+  .checkbox-label {
+  margin-left: 5px;
 }
 
 body main #filter .checkbox {
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 body main #filter .checkbox-container {
   padding: 8px;
-  background-color: var(--gray-5)
+  background-color: var(--gray-5);
 }
 
 body main #filter .checkbox-container:hover {
-  background-color: #fff
+  background-color: #fff;
 }
 
 body main #filter .checkbox-container-label {
-  margin-left: 5px
+  margin-left: 5px;
 }
 
-body main #product {
-  width: 80%
+body main #products {
+  width: 80%;
 }
 
-body main #product .inProducts {
+body main #products .inProducts {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px
+  gap: 20px;
 }
 
-body main #product .box {
+body main #products .box {
   border-radius: 10px;
-  -webkit-box-shadow: 0 17px 34px 0 rgba(44, 39, 56, .04), 0 8px 17px 0 rgba(44, 39, 56, .02);
-  box-shadow: 0 17px 34px 0 rgba(44, 39, 56, .04), 0 8px 17px 0 rgba(44, 39, 56, .02);
-  -webkit-transition: -webkit-box-shadow .3s ease;
-  transition: -webkit-box-shadow .3s ease;
-  transition: box-shadow .3s ease;
-  transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+  -webkit-box-shadow: 0 17px 34px 0 rgba(44, 39, 56, 0.04),
+    0 8px 17px 0 rgba(44, 39, 56, 0.02);
+  box-shadow: 0 17px 34px 0 rgba(44, 39, 56, 0.04),
+    0 8px 17px 0 rgba(44, 39, 56, 0.02);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   background-color: #fff;
-  color: #333
+  color: #333;
 }
 
-body main #product .box .top {
+body main #products .box .top {
   overflow: hidden;
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px
+  border-top-right-radius: 10px;
 }
 
-body main #product .box .top img {
+body main #products .box .top img {
   width: 100%;
+  height: 200px;
+  object-fit: contain;
   display: block;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-body main #product .box .top img:hover {
+body main #products .box .top img:hover {
   -webkit-transform: scale(1.1);
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
-body main #product .box .bottom {
-  padding: 10px
+body main #products .box .bottom {
+  padding: 10px;
 }
 
-body main #product .box .bottom .model {
+body main #products .box .bottom .model {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px
+  margin-bottom: 5px;
 }
 
-body main #product .box .bottom .total .current-price {
+body main #products .box .bottom .total .current-price {
   color: #e44d26;
   font-size: 16px;
-  font-weight: bold
+  font-weight: bold;
 }
 
-body main #product .box .bottom .total .price {
+body main #products .box .bottom .total .price {
   font-size: 16px;
   color: #c1624a;
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 
-body main #product .box .bottom .total .discount-price {
+body main #products .box .bottom .total .discount-price {
   color: #e44d26;
   font-size: 16px;
-  font-weight: bold
+  font-weight: bold;
 }
 
-body main #product .box .bottom .category {
-  font-size: 12px
+body main #products .box .bottom .category {
+  font-size: 12px;
 }
 
-body main #product .box .bottom .stock {
+body main #products .box .bottom .stock {
   font-size: 12px;
   color: gray;
-  margin-top: 5px
+  margin-top: 5px;
 }
 
-body main #product .box:hover {
-  -webkit-box-shadow: 0 24px 48px 0 rgba(44, 39, 56, .1), 0 12px 24px 0 rgba(44, 39, 56, .06);
-  box-shadow: 0 24px 48px 0 rgba(44, 39, 56, .1), 0 12px 24px 0 rgba(44, 39, 56, .06)
+body main #products .box:hover {
+  -webkit-box-shadow: 0 24px 48px 0 rgba(44, 39, 56, 0.1),
+    0 12px 24px 0 rgba(44, 39, 56, 0.06);
+  box-shadow: 0 24px 48px 0 rgba(44, 39, 56, 0.1),
+    0 12px 24px 0 rgba(44, 39, 56, 0.06);
 }
 
-body main #product .pagination .page-item:first-child .page-link {
-  border-top-left-radius: .25rem;
-  border-bottom-left-radius: .25rem
+body main #products .pagination .page-item:first-child .page-link {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
-
-
-body main #product .pagination .page-item:last-child .page-link {
-  border-top-right-radius: .25rem;
-  border-bottom-right-radius: .25rem;
+body main #products .pagination .page-item:last-child .page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
   border: 1px solid #dee2e6;
-
 }
 
-body main #product .pagination .page-item.disabled .page-link {
+body main #products .pagination .page-item.disabled .page-link {
   color: #6c757d;
   pointer-events: none;
   background-color: #fff;
   border-color: #dee2e6;
 }
 
-body main #product .pagination .page-link {
-  padding: .375rem .75rem;
+body main #products .pagination .page-link {
+  padding: 0.375rem 0.75rem;
 }
 
-
-body main #product .pagination .page-item:not(.disabled) .page-link:not(.active):hover {
-  color: blue !important;
+body
+  main
+  #products
+  .pagination
+  .page-item:not(.disabled)
+  .page-link:not(.active):hover {
+  background-color: var(--gray-4);
+  color: white;
 }
 
-body main #product .pagination .page-link {
+body main #products .pagination .page-link {
   position: relative;
   display: block;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-right: none;
-  -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
 }
 
-body main #product .pagination nav ul li a {
+body main #products .pagination nav ul li a {
   text-decoration: none;
-  color: gray
+  color: gray;
 }
 
-body main #product .pagination .active {
+body main #products .pagination .active {
   background-color: #45a049;
   color: #fff;
-  cursor: default
+  cursor: default;
 }
 
 body footer {
@@ -430,42 +451,42 @@ body footer .footer-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 body footer .footer-container .footer-section {
-  max-width: 300px
+  max-width: 300px;
 }
 
 body footer .footer-container .footer-section h3 {
   font-size: 1.5rem;
   border-bottom: 1px solid #fff;
   padding-bottom: 10px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 body footer .footer-container .footer-section p {
-  margin: 0
+  margin: 0;
 }
 
 body footer .footer-container .footer-section p a {
   color: #fff;
   text-decoration: none;
-  -webkit-transition: .5s all;
-  transition: .5s all
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 body footer .footer-container .footer-section p a:hover {
-  color: #ff8201
+  color: #ff8201;
 }
 
 .products {
-  gap: 20px
+  gap: 20px;
 }
 
 .menu {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   position: fixed;
   z-index: 999;
   top: 100%;
@@ -474,11 +495,11 @@ body footer .footer-container .footer-section p a:hover {
   right: 0;
   background-color: #fff;
   overflow: scroll;
-  border-radius: 10px
+  border-radius: 10px;
 }
 
 .menu .filters {
-  padding: 16px 24px 16px 16px
+  padding: 16px 24px 16px 16px;
 }
 
 .filterBy .headerFilter {
@@ -490,14 +511,14 @@ body footer .footer-container .footer-section p a:hover {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 10px 16px;
-  border-bottom: 1px solid var(--gray-4)
+  border-bottom: 1px solid var(--gray-4);
 }
 
 .filterBy .headerFilter h5 {
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
-  color: var(--gray-2)
+  color: var(--gray-2);
 }
 
 .buttons {
@@ -509,7 +530,7 @@ body footer .footer-container .footer-section p a:hover {
   gap: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
 }
 
 .btncontainer {
@@ -522,7 +543,7 @@ body footer .footer-container .footer-section p a:hover {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none
+  user-select: none;
 }
 
 .btncontainer input {
@@ -530,7 +551,7 @@ body footer .footer-container .footer-section p a:hover {
   opacity: 0;
   cursor: pointer;
   height: 0;
-  width: 0
+  width: 0;
 }
 
 .checkmark {
@@ -540,25 +561,25 @@ body footer .footer-container .footer-section p a:hover {
   height: 20px;
   width: 20px;
   border: 1px solid var(--main-default);
-  border-radius: 3px
+  border-radius: 3px;
 }
 
-.btncontainer:hover input~.checkmark {
-  background-color: var(--gray-4)
+.btncontainer:hover input ~ .checkmark {
+  background-color: var(--gray-4);
 }
 
-.btncontainer input:checked~.checkmark {
-  background-color: var(--main-default)
+.btncontainer input:checked ~ .checkmark {
+  background-color: var(--main-default);
 }
 
 .checkmark:after {
   content: "";
   position: absolute;
-  display: none
+  display: none;
 }
 
-.btncontainer input:checked~.checkmark:after {
-  display: block
+.btncontainer input:checked ~ .checkmark:after {
+  display: block;
 }
 
 .btncontainer .checkmark:after {
@@ -569,172 +590,172 @@ body footer .footer-container .footer-section p a:hover {
   border: solid #fff;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg)
+  transform: rotate(45deg);
 }
 
 @media screen and (min-width: 768px) {
   .menu {
-      width: 100%;
-      position: unset;
-      overflow: unset;
-      position: relative;
-      top: 0;
-      z-index: 1
+    width: 100%;
+    position: unset;
+    overflow: unset;
+    position: relative;
+    top: 0;
+    z-index: 1;
   }
 
   .menu .filters {
-      padding: 0;
-      margin-top: 0
+    padding: 0;
+    margin-top: 0;
   }
 
   .filter {
-      -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-      order: -1;
-      width: 20%
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    width: 20%;
   }
 }
 
-@media(max-width: 1400px) {
+@media (max-width: 1400px) {
   #info {
-      background-color: var(--gray-2);
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      color: #fff;
-      height: 6em
+    background-color: var(--gray-2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    height: 6em;
   }
 
   #info .socials a {
-      color: #fff;
-      text-decoration: none
+    color: #fff;
+    text-decoration: none;
   }
 
   #info .socials a .fab {
-      cursor: pointer;
-      margin-right: 20px;
-      font-size: 10px !important;
-      -webkit-transition: color .5s;
-      transition: color .5s
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 10px !important;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
   }
 
   #info .socials .fab:hover {
-      color: #ff8201
+    color: #ff8201;
   }
 
   #info .contact {
-      font-family: "Catamaran", sans-serif;
-      font-size: 10px !important;
-      font-weight: 300;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      gap: 40px
+    font-family: "Catamaran", sans-serif;
+    font-size: 10px !important;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
   }
 
   #info .contact .phone .fal {
-      margin-right: 10px
+    margin-right: 10px;
   }
 
   #info .contact .mail .fal {
-      margin-right: 10px
+    margin-right: 10px;
   }
 
   .logo img {
-      cursor: pointer
+    cursor: pointer;
   }
 
-  input[type=text] {
-      padding: 10px;
-      border: 1px solid var(--gray-4);
-      border-radius: 5px;
-      margin-right: 5px;
-      outline: none;
-      width: 800px !important;
-      max-width: 1100px;
-      border-radius: 20px
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--gray-4);
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 800px !important;
+    max-width: 1100px;
+    border-radius: 20px;
   }
 
-  input[type=text] {
-      max-width: 90%
+  input[type="text"] {
+    max-width: 90%;
   }
 }
 
-@media(max-width: 992px) {
-  input[type=text] {
-      padding: 10px;
-      border: 1px solid var(--gray-4);
-      border-radius: 5px;
-      margin-right: 5px;
-      outline: none;
-      width: 400px !important;
-      max-width: 1100px;
-      border-radius: 20px
+@media (max-width: 992px) {
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--gray-4);
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 400px !important;
+    max-width: 1100px;
+    border-radius: 20px;
   }
 
   .logo img {
-      width: 130px !important
+    width: 130px !important;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   #info {
-      background-color: var(--gray-2);
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      color: #fff;
-      height: 6em
+    background-color: var(--gray-2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    height: 6em;
   }
 
   #info .socials a {
-      color: #fff;
-      text-decoration: none
+    color: #fff;
+    text-decoration: none;
   }
 
   #info .socials a .fab {
-      cursor: pointer;
-      margin-right: 20px;
-      font-size: 8px !important;
-      -webkit-transition: color .5s;
-      transition: color .5s
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 8px !important;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
   }
 
   #info .socials .fab:hover {
-      color: #ff8201
+    color: #ff8201;
   }
 
   #info .contact {
-      font-family: "Catamaran", sans-serif;
-      font-size: 8px !important;
-      font-weight: 300;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      gap: 40px
+    font-family: "Catamaran", sans-serif;
+    font-size: 8px !important;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
   }
 
   #info .contact .phone .fal {
-      margin-right: 10px
+    margin-right: 10px;
   }
 
   #info .contact .mail .fal {
-      margin-right: 10px
+    margin-right: 10px;
   }
 
   .logo img {
-      cursor: pointer;
-      width: 100px !important
+    cursor: pointer;
+    width: 100px !important;
   }
 
-  input[type=text] {
-      padding: 10px;
-      border: 1px solid var(--gray-4);
-      border-radius: 5px;
-      margin-right: 5px;
-      outline: none;
-      width: 200px !important;
-      max-width: 1100px;
-      border-radius: 20px
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--gray-4);
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+    width: 200px !important;
+    max-width: 1100px;
+    border-radius: 20px;
   }
 }

@@ -30,10 +30,14 @@ function navigateTabs(direction) {
     }
     if (direction === 'next' && activeTab < tabs.length - 1) {
         tabs[activeTab + 1].click();
-        tabs[activeTab + 1].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+        setTimeout(function() {
+            tabs[activeTab + 1].scrollIntoView({behavior: 'smooth', block: 'nearest'});
+        }, 100); // Delay of 100ms
     } else if (direction === 'prev' && activeTab > 0) {
         tabs[activeTab - 1].click();
-        tabs[activeTab - 1].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+        setTimeout(function() {
+            tabs[activeTab - 1].scrollIntoView({behavior: 'smooth', block: 'nearest'});
+        }, 100); // Delay of 100ms
     }
 }
 
