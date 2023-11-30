@@ -42,15 +42,15 @@ function pagination(c, m) {
 
 
 ////////////////////////////////
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var searchInput = document.getElementById('searchInput');
 
-  searchInput.addEventListener('keypress', function(event) {
-      if (event.key === 'Enter') {
-          event.preventDefault();
-          performSearch(searchInput.value);
-          searchInput.value = '';
-      }
+  searchInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      performSearch(searchInput.value);
+      searchInput.value = '';
+    }
   });
 });
 
@@ -59,6 +59,7 @@ function performSearch(query) {
 }
 
 ////////////////////////////////
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -77,15 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="total d-flex">
                     <div class="price mr-1">${product.price.toFixed(2)}</div>
                     <div class="discount-price mr-1">${(
-                      product.price -
-                      product.price * (product.discountPercentage / 100)
-                    ).toFixed(2)}</div>
+            product.price -
+            product.price * (product.discountPercentage / 100)
+          ).toFixed(2)}</div>
                     <div class="discount">-${product.discountPercentage}%</div>
                   </div>
-                  <div class="category">${
-                    product.category[0].toUpperCase() +
-                    product.category.slice(1)
-                  }</div>
+                  <div class="category">${product.category[0].toUpperCase() +
+          product.category.slice(1)
+          }</div>
                   <div class="stock">In Stock: ${product.stock}</div>
                 </div>
               </div>
@@ -122,15 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
         paginationNumbers.innerHTML = `
-                      <li class="page-item ${
-                        activePage > 1 ? "" : "disabled"
-                      } prev-btn">
+                      <li class="page-item ${activePage > 1 ? "" : "disabled"
+          } prev-btn">
                         <a class="page-link" href="" tabindex="-1">Previous</a>
                       </li>
                       ${paginations}
-                      <li class="page-item ${
-                        activePage < pages ? "" : "disabled"
-                      } next-btn">
+                      <li class="page-item ${activePage < pages ? "" : "disabled"
+          } next-btn">
                         <a class="page-link" href="">Next</a>
                       </li>
           `;
@@ -169,4 +167,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
   showProducts(12, 0);
+});
+
+$('.slick-slider').slick({
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 300,
+  
+  'prevArrow': '<i class="fal fa-chevron-left"></i>',
+  'nextArrow': '<i class="fal fa-chevron-right"></i>'
 });
