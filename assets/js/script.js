@@ -40,6 +40,27 @@ function pagination(c, m) {
   return rangeWithDots;
 }
 
+
+////////////////////////////////
+document.addEventListener('DOMContentLoaded', function() {
+  var searchInput = document.getElementById('searchInput');
+
+  searchInput.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+          event.preventDefault();
+          performSearch(searchInput.value);
+          searchInput.value = '';
+      }
+  });
+});
+
+function performSearch(query) {
+  console.log("Searching for:", query); // Replace with actual search logic
+}
+
+////////////////////////////////
+
+
 document.addEventListener("DOMContentLoaded", () => {
   let activePage = 1;
   const showProducts = (limit, skip) => {
