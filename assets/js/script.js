@@ -191,7 +191,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const showProducts = (products, skip) => {
     productsContainer.innerHTML = "";
     products.slice(skip, activePage * 12).forEach((product) => {
-      productsContainer.innerHTML += `<a class="product" href="./product-detail.html">
+      productsContainer.innerHTML += `<a class="product" href="./product-detail.html" id="p-${
+        product.id
+      }">
               <div class="box">
                 <div class="top">
                   <img src="${product.thumbnail}" alt="${product.title}" />
@@ -215,6 +217,13 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
             </a>`;
     });
+
+    productsContainer.querySelectorAll("a.product").forEach((product) => {
+      product.addEventListener("click", () => {
+        localStorage.setItem("productId", product.id.split("-")[1]);
+      });
+    });
+
     paginate(products);
   };
 
