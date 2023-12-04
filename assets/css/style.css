@@ -226,6 +226,7 @@ body header button:hover {
   left: 1%;
   font-size: 40px;
   color: white;
+  cursor: pointer;
 }
 
 .fa-chevron-right {
@@ -235,6 +236,8 @@ body header button:hover {
   left: 97%;
   font-size: 40px;
   color: white;
+  cursor: pointer;
+
 }
 
 body main #welcome .slick-slider {
