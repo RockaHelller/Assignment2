@@ -166,15 +166,9 @@ body header .logo img {
   cursor: pointer;
 }
 
-/* body header .search-part {
-  width: 70%;
-  max-width: 1000px;
-} */
 body header .search-part {
   width: 70%;
-  /* Adjust if necessary */
   max-width: 100%;
-  /* Ensure it doesn't exceed the width of its parent */
 }
 
 body header .search-bar {
@@ -186,17 +180,6 @@ body header .search-bar {
   align-items: center;
 }
 
-/* body header input[type="text"] {
-  padding: 10px;
-  border: 1px solid var(--gray-4);
-  border-radius: 5px;
-  margin-right: 5px;
-  outline: none;
-  width: 1100px;
-  max-width: 1100px;
-  border-radius: 20px;
-}
- */
 body header input[type="text"] {
   min-width: 200px;
   padding: 10px;
@@ -205,28 +188,14 @@ body header input[type="text"] {
   margin-right: 5px;
   outline: none;
   width: 100%;
-  /* Using a percentage for flexible width */
   border-radius: 20px;
   box-sizing: border-box;
-  /* Include padding and border in the element's total width and height */
 }
 
-/* body header button {
-  width: 100px;
-  padding: 10px;
-  border: 1px solid var(--gray-4);
-  border-radius: 20px;
-  background-color: #ff8201;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-} */
+
 body header button {
   min-width: 60px;
-  /* Minimum width for the button */
   width: auto;
-  /* Allows the button to expand as needed */
   padding: 10px;
   border: 1px solid var(--gray-4);
   border-radius: 20px;
@@ -236,7 +205,6 @@ body header button {
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
-  /* Include padding and border */
 }
 
 body header button:hover {
@@ -285,7 +253,6 @@ body main #welcome .slick-slider .image {
 
 body main #welcome .slick-slider .image img {
   height: 100vh;
-  object-fit: cover;
   width: 100%;
 }
 

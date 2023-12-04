@@ -5,7 +5,7 @@
   --gray-3: #ededed;
   --gray-4: #ccc;
   --gray-5: #f9f9f9;
-  --background: #f0f0f0 ;
+  --background: #f0f0f0;
 }
 
 * {
@@ -81,6 +81,10 @@ body {
   background-color: var(--background);
 }
 
+body header {
+  margin-bottom: 60px;
+}
+
 body header #info {
   background-color: var(--gray-2);
   display: -webkit-box;
@@ -135,6 +139,10 @@ body header #info .contact .mail .fal {
   margin-right: 10px;
 }
 
+body header #navigation {
+  height: 0px;
+}
+
 body header .navbar {
   padding: 15px;
   position: relative;
@@ -143,10 +151,21 @@ body header .navbar {
   border-radius: 50px;
   max-width: 1250px;
   margin: auto;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  z-index: 1;
+}
+
+body header .navbar > div {
 }
 
 body header .logo {
+  height: 24px;
+}
+
+body header .logo a {
+  display: inline-block;
   height: 24px;
 }
 
@@ -156,7 +175,7 @@ body header .logo img {
 
 body header .search-part {
   width: 70%;
-  max-width: 1000px;
+  max-width: 100%;
 }
 
 body header .search-bar {
@@ -168,19 +187,21 @@ body header .search-bar {
   align-items: center;
 }
 
-body header input[type=text] {
+body header input[type="text"] {
+  min-width: 200px;
   padding: 10px;
   border: 1px solid var(--gray-4);
   border-radius: 5px;
   margin-right: 5px;
   outline: none;
-  width: 1100px;
-  max-width: 1100px;
+  width: 100%;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 body header button {
-  width: 100px;
+  min-width: 60px;
+  width: auto;
   padding: 10px;
   border: 1px solid var(--gray-4);
   border-radius: 20px;
@@ -189,6 +210,7 @@ body header button {
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 body header button:hover {
@@ -378,7 +400,8 @@ body .main-holder .left .holder .tab {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Style the buttons inside the tab */
+  height: 455.5px;
+  border: 1px solid #ccc;
 }
 body .main-holder .left .holder .tab i {
   text-align: center;
@@ -431,6 +454,7 @@ body .main-holder .left .holder .tabcontent img {
   width: 602px !important;
   height: 407px !important;
   height: auto;
+  object-fit: contain;
 }
 body .main-holder .right {
   width: 30%;
@@ -483,6 +507,19 @@ body .main-holder .right .stock {
   color: gray;
   margin-top: 5px;
 }
+
+body .main-holder .right .description {
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+body .main-holder .right .description .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 body .main-holder .right .specs-table {
   width: 100%;
   border-collapse: collapse;
@@ -501,4 +538,180 @@ body .main-holder .right .specs-table tr:first-child {
 }
 body .main-holder .right .specs-table th {
   background-color: #f4f4f4;
-}/*# sourceMappingURL=product-detail.css.map */
+}
+
+
+
+
+@media (max-width: 1400px) {
+  #info {
+    background-color: var(--gray-2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    height: 6em;
+  }
+
+  #info .socials a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #info .socials a .fab {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 10px !important;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+  }
+
+  #info .socials .fab:hover {
+    color: #ff8201;
+  }
+
+  #info .contact {
+    font-family: "Catamaran", sans-serif;
+    font-size: 10px !important;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+  }
+
+  #info .contact .phone .fal {
+    margin-right: 10px;
+  }
+
+  #info .contact .mail .fal {
+    margin-right: 10px;
+  }
+
+  .logo img {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main-holder {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-holder > div {
+    width: 100% !important;
+  }
+  .main-holder .right {
+    text-align: center;
+  }
+
+  .logo img {
+    width: 130px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body header .logo img {
+    height: 3vw;
+  }
+
+  #info {
+    background-color: var(--gray-2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    height: 6em;
+  }
+
+  #info .socials a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #info .socials a .fab {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 8px !important;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+  }
+
+  #info .socials .fab:hover {
+    color: #ff8201;
+  }
+
+  #info .contact {
+    font-family: "Catamaran", sans-serif;
+    font-size: 8px !important;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+  }
+
+  #info .contact .phone .fal {
+    margin-right: 10px;
+  }
+
+  #info .contact .mail .fal {
+    margin-right: 10px;
+  }
+
+  .logo img {
+    cursor: pointer;
+    width: 100px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  #info {
+    background-color: var(--gray-2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    height: 6em;
+  }
+
+  #info .socials a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #info .socials a .fab {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 8px !important;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+  }
+
+  #info .socials .fab:hover {
+    color: #ff8201;
+  }
+
+  #info .contact {
+    font-family: "Catamaran", sans-serif;
+    font-size: 8px !important;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+  }
+
+  #info .contact .phone .fal {
+    margin-right: 10px;
+  }
+
+  #info .contact .mail .fal {
+    margin-right: 10px;
+  }
+
+  .logo img {
+    cursor: pointer;
+    width: 100px !important;
+  }
+} 

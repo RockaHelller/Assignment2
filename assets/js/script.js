@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let activePage = 1;
   shownProducts = 100;
 
-  var searchInput = document.getElementById("searchInput");
+  let searchInput = document.getElementById("searchInput");
 
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -74,6 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function performSearch(query) {
     fetchSearchedProductsJSON(query).then((res) => {
       allProducts = res.products;
+
+      if (allProducts.length == 0) {
+        productsContainer.innerHTML = "There is not any product.";
+        paginate();
+        return;
+      }
 
       categories = [];
       allProducts.forEach((product) => {
@@ -131,62 +137,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  fetchAllProductsJSON().then((res) => {
-    allProducts = res.products;
+  if (localStorage.getItem("search")) {
+    performSearch(localStorage.getItem("search"));
+    localStorage.removeItem("search");
+  } else {
+    fetchAllProductsJSON().then((res) => {
+      allProducts = res.products;
 
-    categories = [];
-    allProducts.forEach((product) => {
-      if (!categories.includes(product.category)) {
-        categories.push(product.category);
-      }
-    });
-
-    categoriesContainer.innerHTML = "";
-    categories.forEach((category) => {
-      categoriesContainer.innerHTML += `<li>
-              <label class="btncontainer">
-                <input type="checkbox" value="${category}" />
-                <span class="checkmark"></span>
-                ${category[0].toUpperCase() + category.slice(1)}
-              </label>
-            </li>`;
-    });
-
-    categoriesContainer.querySelectorAll("li").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        if (e.target instanceof HTMLInputElement) {
-          checkedProducts = [];
-          activePage = 1;
-          const checkedElement = e.target.parentElement.innerText;
-          shownProducts = checkedCategories.length * 5;
-          if (e.target.checked) {
-            checkedCategories.push(checkedElement);
-          } else {
-            checkedCategories = checkedCategories.filter((ctgr) => {
-              return ctgr != checkedElement;
-            });
-          }
-          allProducts.forEach((product) => {
-            checkedCategories.forEach((ctgr) => {
-              if (
-                product.category[0].toUpperCase() + product.category.slice(1) ==
-                ctgr
-              ) {
-                checkedProducts.push(product);
-              }
-            });
-          });
-          if (checkedCategories.length == 0) {
-            showProducts(allProducts, 0);
-          } else {
-            showProducts(checkedProducts, 0);
-          }
+      categories = [];
+      allProducts.forEach((product) => {
+        if (!categories.includes(product.category)) {
+          categories.push(product.category);
         }
       });
-    });
 
-    showProducts(allProducts, 0);
-  });
+      categoriesContainer.innerHTML = "";
+      categories.forEach((category) => {
+        categoriesContainer.innerHTML += `<li>
+                <label class="btncontainer">
+                  <input type="checkbox" value="${category}" />
+                  <span class="checkmark"></span>
+                  ${category[0].toUpperCase() + category.slice(1)}
+                </label>
+              </li>`;
+      });
+
+      categoriesContainer.querySelectorAll("li").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          if (e.target instanceof HTMLInputElement) {
+            checkedProducts = [];
+            activePage = 1;
+            const checkedElement = e.target.parentElement.innerText;
+            shownProducts = checkedCategories.length * 5;
+            if (e.target.checked) {
+              checkedCategories.push(checkedElement);
+            } else {
+              checkedCategories = checkedCategories.filter((ctgr) => {
+                return ctgr != checkedElement;
+              });
+            }
+            allProducts.forEach((product) => {
+              checkedCategories.forEach((ctgr) => {
+                if (
+                  product.category[0].toUpperCase() +
+                    product.category.slice(1) ==
+                  ctgr
+                ) {
+                  checkedProducts.push(product);
+                }
+              });
+            });
+            if (checkedCategories.length == 0) {
+              showProducts(allProducts, 0);
+            } else {
+              showProducts(checkedProducts, 0);
+            }
+          }
+        });
+      });
+
+      showProducts(allProducts, 0);
+    });
+  }
 
   const showProducts = (products, skip) => {
     productsContainer.innerHTML = "";
