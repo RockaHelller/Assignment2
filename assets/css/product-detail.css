@@ -79,6 +79,9 @@ ul {
 
 body {
   background-color: var(--background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body header {
@@ -221,7 +224,7 @@ body footer {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
-
+  margin-top: auto;
 }
 
 body footer .footer-container {
