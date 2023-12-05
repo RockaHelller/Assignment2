@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
         `;
     });
-    console.log(product);
 
     function initializeDefaultTab() {
       document.getElementById("defaultOpen").click();

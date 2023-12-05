@@ -1,21 +1,28 @@
+const link = "https://dummyjson.com/";
+
+// Get all products from the API endpoint
 async function fetchAllProductsJSON() {
-  const response = await fetch(`https://dummyjson.com/products?limit=100`);
+  const response = await fetch(`${link}products?limit=100`);
   const products = await response.json();
   return products;
 }
 
+// Get search results from the API endpoint
 async function fetchSearchedProductsJSON(query) {
   const response = await fetch(
-    `https://dummyjson.com/products/search?q=${query}&limit=100`
+    `${link}products/search?q=${query}&limit=100`
   );
   const products = await response.json();
   return products;
 }
 
+// Containers and inputs
 const categoriesContainer = document.querySelector("ul.categories");
 const productsContainer = document.querySelector("#products .inProducts");
 const paginationNumbers = document.querySelector("#products .pagination ul");
+const searchInput = document.getElementById("searchInput");
 
+//Pagination numbers with dots
 function pagination(c, m) {
   var current = c,
     last = m,
@@ -46,23 +53,18 @@ function pagination(c, m) {
   return rangeWithDots;
 }
 
+// Variables
 let categoryBtns;
-
 let categories = [];
-
 let checkedCategories = [];
-let shownProducts = 0;
+let shownProducts = 100;
 let checkedProducts = [];
-
-let count = 0;
-
 let allProducts;
+
 document.addEventListener("DOMContentLoaded", () => {
   let activePage = 1;
-  shownProducts = 100;
 
-  let searchInput = document.getElementById("searchInput");
-
+  //Handle searching
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -71,17 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Search products
   function performSearch(query) {
     fetchSearchedProductsJSON(query).then((res) => {
       allProducts = res.products;
 
       if (allProducts.length == 0) {
-        productsContainer.innerHTML = "There is not any product.";
+        productsContainer.innerHTML = "<h2 class='no-result'>There is not any product.</h2>";
         paginate();
         return;
       }
 
       categories = [];
+      //Add product categories to the array
       allProducts.forEach((product) => {
         if (!categories.includes(product.category)) {
           categories.push(product.category);
@@ -89,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       categoriesContainer.innerHTML = "";
+      //Show categories
       categories.forEach((category) => {
         categoriesContainer.innerHTML += `<li>
                 <label class="btncontainer">
@@ -99,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </li>`;
       });
 
+      //Handle category checkboxes click and show categorized products
       categoriesContainer.querySelectorAll("li").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           if (e.target instanceof HTMLInputElement) {
@@ -137,14 +143,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //If there is query in localstorage, then search products
   if (localStorage.getItem("search")) {
     performSearch(localStorage.getItem("search"));
     localStorage.removeItem("search");
   } else {
+    // Else show all products
     fetchAllProductsJSON().then((res) => {
       allProducts = res.products;
 
       categories = [];
+      //Add product categories to the array
       allProducts.forEach((product) => {
         if (!categories.includes(product.category)) {
           categories.push(product.category);
@@ -152,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       categoriesContainer.innerHTML = "";
+      //Show product categories
       categories.forEach((category) => {
         categoriesContainer.innerHTML += `<li>
                 <label class="btncontainer">
@@ -162,6 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </li>`;
       });
 
+      //Handle category checkboxes click and show categorized products
       categoriesContainer.querySelectorAll("li").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           if (e.target instanceof HTMLInputElement) {
@@ -200,9 +211,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //Show products
   const showProducts = (products, skip) => {
     productsContainer.innerHTML = "";
-    products.slice(skip, activePage * 12).forEach((product) => {
+    //Skip part of products and show 9 items
+    products.slice(skip, activePage * 9).forEach((product) => {
       productsContainer.innerHTML += `<a class="product" href="./product-detail.html" id="p-${
         product.id
       }">
@@ -213,11 +226,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="bottom">
                   <div class="model">${product.title}</div>
                   <div class="total d-flex">
-                    <div class="price mr-1">${product.price.toFixed(2)}</div>
+                    <div class="price mr-1">${product.price.toFixed(2)}$</div>
                     <div class="discount-price mr-1">${(
                       product.price -
                       product.price * (product.discountPercentage / 100)
-                    ).toFixed(2)}</div>
+                    ).toFixed(2)}$</div>
                     <div class="discount">-${product.discountPercentage}%</div>
                   </div>
                   <div class="category">${
@@ -230,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>`;
     });
 
+    //Handle Product container click
     productsContainer.querySelectorAll("a.product").forEach((product) => {
       product.addEventListener("click", () => {
         localStorage.setItem("productId", product.id.split("-")[1]);
@@ -239,23 +253,27 @@ document.addEventListener("DOMContentLoaded", () => {
     paginate(products);
   };
 
+  //Show pagination by products
   const paginate = (products) => {
     let paginations = "";
     paginationNumbers.innerHTML = "";
 
     let pages = 0;
 
-    if (products.length > 12) {
-      pages = (
-        products.length % 12 == 0
-          ? products.length / 12
-          : products.length / 12 + 1
-      ).toFixed();
+    // Get the page count by product count
+    if (products.length > 9) {
+      pages = 
+        products.length % 9 == 0
+          ? products.length / 9
+          : Math.floor(products.length / 9) + 1
+    ;
     }
 
     let pageNumbers = pagination(+activePage, +pages);
 
+    //If page count is more than 1
     if (+pages > 1) {
+      //Add pagination numbers and check if page count is active or it is dot
       for (let i = 0; i < pageNumbers.length; i++) {
         if (pageNumbers[i] == activePage) {
           paginations += `
@@ -277,6 +295,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
         }
       }
+
+      //Add page numbers to the page
       paginationNumbers.innerHTML = `
                     <li class="page-item ${
                       activePage > 1 ? "" : "disabled"
@@ -290,34 +310,39 @@ document.addEventListener("DOMContentLoaded", () => {
                       <a class="page-link" href="">Next</a>
                     </li>
         `;
+
+        //pagination Buttons
       const pageBtns = document.querySelectorAll(".page-item.number a");
       const prevBtn = document.querySelector(".page-item.prev-btn a");
       const nextBtn = document.querySelector(".page-item.next-btn a");
+      //Handle Page number buttons
       pageBtns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
           e.preventDefault();
           activePage = btn.innerHTML;
           paginations = "";
           paginate(products);
-          showProducts(products, (activePage - 1) * 12);
+          showProducts(products, (activePage - 1) * 9);
         });
       });
+      //Handle next button
       nextBtn.addEventListener("click", (e) => {
         e.preventDefault();
         if (activePage < pages) {
           activePage++;
           paginations = "";
           paginate(products);
-          showProducts(products, (activePage - 1) * 12);
+          showProducts(products, (activePage - 1) * 9);
         }
       });
+      //Handle Prev button
       prevBtn.addEventListener("click", (e) => {
         e.preventDefault();
         if (activePage > 1) {
           activePage--;
           paginations = "";
           paginate(products);
-          showProducts(products, (activePage - 1) * 12);
+          showProducts(products, (activePage - 1) * 9);
         }
       });
     }
