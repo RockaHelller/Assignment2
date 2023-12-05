@@ -1,3 +1,4 @@
+// Tab-menu functionality
 function openTab(evt, imageName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");

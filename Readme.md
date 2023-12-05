@@ -4,4 +4,5 @@ Initial Setup - Begin by cloning the repository with the command: git clone http
 
 How to Use - Launch the main page (index.html) in your web browser. Utilize the search feature to locate products by their names. Apply the brand filter from the provided dropdown to refine product listings. Use the pagination controls to browse through various product pages.Select any product to access a more comprehensive view of its details on the product detail page.
 
-Here is the Github Pages Link - https://rockahelller.github.io/Assignment2/
+Github Page Link - https://rockahelller.github.io/Assignment2/
+Github Repository Link - https://github.com/RockaHelller/Assignment2
